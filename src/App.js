@@ -1,5 +1,5 @@
 import Todo from "./components/Todo"
-// test main 
+// This is a demo comment to monitor the git commit and git changes 
 function App() {
   return (
     <div>
