@@ -8,6 +8,9 @@ function Todo(props) { // Accepting data from outside the component from the pla
     function deleteHandler(){
        setModalIsOpen(true);
     }
+    function closeModalHandler(){
+       setModalIsOpen(false);
+    }
 
     return ( 
     <div className="card">
@@ -15,8 +18,8 @@ function Todo(props) { // Accepting data from outside the component from the pla
       <div className="actions">
         <button className="btn" onClick={deleteHandler}>Delete</button>
       </div>
-      {modelIsOpen && <Modal />}
-      {modelIsOpen && <Backdrop />}
+      {modelIsOpen && <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler}/>}
+      {modelIsOpen && <Backdrop onCancel={closeModalHandler}/>}
       
     </div>
   );
